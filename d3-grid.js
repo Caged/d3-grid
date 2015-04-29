@@ -1,7 +1,7 @@
 (function() {
   var DEBUG = false;
 
-  d3.layout.grid = function() {
+  module.exports = function() {
     var mode = "equal",
         layout = _distributeEqually,
         x = d3.scale.ordinal(),
@@ -18,7 +18,7 @@
     }
 
     function _distributeEqually(nodes) {
-      var i = -1, 
+      var i = -1,
           n = nodes.length,
           _cols = cols ? cols : 0,
           _rows = rows ? rows : 0,
